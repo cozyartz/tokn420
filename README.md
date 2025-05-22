@@ -1,47 +1,26 @@
-# Astro Starter Kit: Minimal
+# Tokn420
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+**tokn420.cc** is a decentralized, community-driven platform for cannabis culture after legalization.  
+Powered by Astro, Tailwind CSS, React, and Framer Motion — it's a glowing dark-themed site featuring zines, merch drops, token utilities, and more.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## 🔥 Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- 🧠 Astro + TailwindCSS + React
+- 🌿 Cannabis equity and culture mission
+- 📘 MD-based Zine content with dynamic pages
+- ⚡ Glowing dark theme with motion
+- 🧩 Miniapp-ready for onchain tools
 
-## 🚀 Project Structure
+## 🛠️ Stack
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Astro](https://astro.build)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Hot Toast](https://react-hot-toast.com)
+- [Cloudflare Pages](https://pages.cloudflare.com) (recommended deployment)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🚀 Getting Started
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+pnpm install
+pnpm dev

@@ -1,0 +1,23 @@
+// /src/pages/zine/[slug].astro
+---
+import { getEntryBySlug } from 'astro:content';
+import { Astro } from 'astro';
+const { slug } = Astro.params;
+const { Content, data } = await getEntryBySlug("zine", slug);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{data.title} – Tokn420 Zine</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body class="bg-black text-white font-sans">
+    <article class="prose prose-invert prose-lg max-w-3xl mx-auto py-20 px-6">
+      <h1 class="text-neon-green drop-shadow-[0_0_10px_#39ff14]">{data.title}</h1>
+      <p class="text-white/60 mb-4">By {data.author || 'Anonymous'} · {data.publishDate}</p>
+      <Content />
+    </article>
+  </body>
+</html>

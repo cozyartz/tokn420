@@ -1,16 +1,80 @@
+// /src/pages/index.astro
 ---
-
+import '../styles/global.css';
+import GlowingCTA from '../components/react/GlowingCTA';
+import Layout from '../components/react/Layout';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tokn420 — Decentralized Cannabis Culture</title>
+    <meta name="description" content="Powering cannabis culture after legalization. Built by patients, powered by the people." />
+    <link rel="icon" href="/logo-glow.png" />
+  </head>
+  <body class="bg-black text-white font-sans overflow-x-hidden">
+    <Layout>
+      <!-- Glowing Hero -->
+      <section class="flex flex-col items-center justify-center text-center min-h-screen px-4 py-20">
+        <img src="/logo-glow.png" alt="Tokn420 Logo" class="w-32 md:w-48 animate-pulse mb-6 drop-shadow-[0_0_10px_#39ff14]" />
+        <h1 class="text-4xl md:text-6xl font-black text-neon-green drop-shadow-[0_0_15px_#39ff14]">tokn420</h1>
+        <p class="mt-4 max-w-xl text-neon-green/80 text-lg">Decentralized cannabis culture. Created by a patient. Built for the future.</p>
+        <div class="mt-10">
+          <GlowingCTA />
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="whitepaper" class="bg-[#0c0c0c] py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6 text-neon-green">Why Tokn420?</h2>
+          <p class="text-white/80 leading-relaxed text-lg md:text-xl">
+            As weed becomes legal, we ask a harder question: what comes next?
+            Tokn420 is a crypto-native brand helping fund cannabis equity, support chronic illness access, and fuel cultural creators left behind in the legalization wave.
+          </p>
+        </div>
+      </section>
+
+      <!-- Glow Divider -->
+      <div class="h-2 bg-gradient-to-r from-transparent via-neon-green to-transparent blur-sm"></div>
+
+      <!-- Features -->
+      <section class="py-24 px-6 text-center space-y-20 bg-black">
+        <div>
+          <h3 class="text-xl uppercase tracking-widest text-neon-green mb-3">What We Do</h3>
+          <h2 class="text-4xl font-extrabold text-white drop-shadow-[0_0_10px_#39ff14]">Mission-Driven, Token-Fueled</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto text-left">
+          <div class="bg-[#111] p-6 rounded-xl shadow-md border border-neon-green/20 hover:shadow-neon-green/40 transition">
+            <h4 class="text-neon-green font-bold text-lg mb-2">Access + Equity</h4>
+            <p class="text-white/80">We support expungement, affordability, and dignity for patients and incarcerated communities post-legalization.</p>
+          </div>
+          <div class="bg-[#111] p-6 rounded-xl shadow-md border border-neon-green/20 hover:shadow-neon-green/40 transition">
+            <h4 class="text-neon-green font-bold text-lg mb-2">Culture Grants</h4>
+            <p class="text-white/80">We fund creators, zines, collectives, and stoner storytellers building cannabis culture without permission.</p>
+          </div>
+          <div class="bg-[#111] p-6 rounded-xl shadow-md border border-neon-green/20 hover:shadow-neon-green/40 transition">
+            <h4 class="text-neon-green font-bold text-lg mb-2">Onchain Tools</h4>
+            <p class="text-white/80">Miniapps, token drops, merch, and DAO-lite governance — all powered by Tokn420.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="bg-[#111] text-center py-24 px-6">
+        <h2 class="text-3xl md:text-5xl text-neon-green font-bold drop-shadow-[0_0_10px_#39ff14]">Join the Movement</h2>
+        <p class="text-white/80 mt-4 max-w-xl mx-auto text-lg">Mint a token, claim your merch, read the zine. This is decentralized cannabis culture. For real.</p>
+        <div class="mt-10 flex justify-center gap-6 flex-wrap">
+          <a href="/mint" class="bg-neon-green text-black py-3 px-6 rounded-full font-semibold hover:scale-105 transition">Mint</a>
+          <a href="/shop" class="bg-transparent border border-neon-green py-3 px-6 rounded-full text-neon-green hover:bg-neon-green hover:text-black transition">Shop Merch</a>
+        </div>
+      </section>
+
+      <footer class="text-center py-6 bg-black text-white/50 text-sm">
+        &copy; 2025 Tokn420 Collective. Built with Astro + Tailwind.
+      </footer>
+    </Layout>
+  </body>
 </html>

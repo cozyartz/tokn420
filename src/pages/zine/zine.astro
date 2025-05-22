@@ -1,0 +1,39 @@
+// /src/pages/zine.astro
+---
+import { getCollection } from 'astro:content';
+import Layout from '../components/react/Layout.tsx';
+import GlowingCTA from '../components/react/GlowingCTA.tsx';
+const posts = await getCollection("zine");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tokn420 Zine</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body class="bg-black text-white font-sans">
+    <Layout>
+      <section class="min-h-screen py-20 px-6 text-center">
+        <h1 class="text-5xl text-neon-green font-extrabold drop-shadow-[0_0_15px_#39ff14]">The Tokn420 Zine</h1>
+        <p class="mt-4 text-white/80 max-w-xl mx-auto">
+          Chronic illness. Culture. Cannabis. Stories from the margins.
+        </p>
+
+        <div class="mt-10">
+          <GlowingCTA />
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
+          {posts.map((post) => (
+            <a href={`/zine/${post.slug}`} class="group bg-[#111] border border-neon-green/20 p-6 rounded-xl hover:scale-105 hover:border-neon-green/80 transition-all shadow-lg">
+              <h2 class="text-neon-green text-xl font-semibold group-hover:underline">{post.data.title}</h2>
+              <p class="text-sm text-white/70 mt-2">{post.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    </Layout>
+  </body>
+</html>
